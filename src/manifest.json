@@ -1,6 +1,6 @@
 {
-  "name": "my-project",
-  "short_name": "my-project",
+  "name": "Preact and Redux Perforamnce",
+  "short_name": "preact-redux-performance",
   "start_url": "/",
   "display": "standalone",
   "orientation": "portrait",
