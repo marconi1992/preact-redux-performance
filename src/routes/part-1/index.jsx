@@ -6,7 +6,7 @@ const Part1 = () => {
 
     return (
         <div className="container-text mx-auto pt-6">
-            <p>{message}</p>
+            <p className="mb-2">{message}</p>
             <Button onClick={() => setMessage("Hello React")}>Click here</Button>
         </div>
     )

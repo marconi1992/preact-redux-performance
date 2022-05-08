@@ -5,8 +5,8 @@ const Part2 = () => {
     const [count, setCount] = useState(0);
 
     return (
-        <div className="container mx-auto pt-6">
-            <p>Counter: {count}</p>
+        <div className="container-text mx-auto pt-6">
+            <p className="mb-2">Counter: {count}</p>
             <Button onClick={() => setCount(count + 1)}>Increment</Button>
         </div>
     )

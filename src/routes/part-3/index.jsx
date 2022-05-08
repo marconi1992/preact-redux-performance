@@ -46,13 +46,13 @@ const Part3 = () => {
     const activeItems = items.filter((item) => item.status === "active")
  
     return (
-        <div className="container mx-auto pt-6">
+        <div className="container-text mx-auto pt-6">
             <Input 
                 className="mr-2"
                 onChange={setItemInputText}
                 value={itemInputText} />
             <Button onClick={addItem}>Add Item</Button>
-            <div>
+            <div className="pt-4">
                 <h3 className="font-medium">In Progress</h3>
                 <TodoList className="mb-4" items={activeItems} />  
             </div>  

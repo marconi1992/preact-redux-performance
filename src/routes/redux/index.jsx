@@ -9,7 +9,7 @@ const Kanban = ({ items, itemInputText, setItemInputText, addItem }) => {
     const finishedItems = items.filter((item) => item.status === "finished");
 
     return (
-        <div className="container mx-auto pt-6">
+        <div className="container-text mx-auto pt-6">
             <Input className="mr-2" onChange={(evt) => setItemInputText(evt.target.value)} value={itemInputText} />
             <Button className="mb-4" onClick={addItem}>Add item</Button>
             <h3 className="font-medium">In Progress</h3>
