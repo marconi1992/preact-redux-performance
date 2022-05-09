@@ -8,7 +8,7 @@ const WastedRenders = () => {
                 <p className="text-lg mb-2">A <strong>"wasted render"</strong> would happen when the component renders again but the output is the same.</p>
             </section>
             <section className="mb-6">
-                <h1 className="text-4xl mb-3">When a component renders again?</h1>
+                <h1 className="text-3xl mb-3">When a component renders again?</h1>
                 <p className="text-lg mb-2">React components automatically renders again whenever:</p>
                 <ul className="list-disc list-inside pl-4">
                     <li>The parent component gets updated</li>
