@@ -34,7 +34,7 @@ const reducer = (state, action) => {
 }
 
 
-const Part3 = () => {
+const Example3 = () => {
     const [{ itemInputText, items }, dispatch] = useReducer(reducer, initialState); 
 
     const addItem = useCallback(() => dispatch({ type: "addItem"}), []);
@@ -60,4 +60,4 @@ const Part3 = () => {
     );
 }
 
-export default Part3;
+export default Example3;

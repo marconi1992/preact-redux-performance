@@ -10,7 +10,7 @@ const reducer = (state, action) => {
     }
 }
 
-const ShallowCompare = () => {
+const Example2 = () => {
     const [count, dispatch] = useReducer(reducer, 0);
 
     const increment = useCallback(() => dispatch({ type: "INCR" }), []);
@@ -23,4 +23,4 @@ const ShallowCompare = () => {
     )
 }
 
-export default ShallowCompare;
+export default Example2;

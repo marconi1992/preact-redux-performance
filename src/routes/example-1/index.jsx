@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Button from "../../components/Button";
 
-const Part1 = () => {
+const Example1 = () => {
     const [message, setMessage] = useState("");
 
     return (
@@ -12,4 +12,4 @@ const Part1 = () => {
     )
 }
 
-export default Part1;
+export default Example1;

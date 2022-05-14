@@ -1,7 +1,7 @@
 import { useState, useCallback } from "preact/hooks";
 import Button from "../../components/MemoizedButton";
 
-const Part1 = () => {
+const Example1 = () => {
     const [message, setMessage] = useState("");
 
     const showMessage = useCallback(() => setMessage("Hello React"), [])
@@ -14,4 +14,4 @@ const Part1 = () => {
     )
 }
 
-export default Part1;
+export default Example1;

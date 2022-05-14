@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Button from "../../components/MemoizedButton";
 
-const Part2 = () => {
+const Example2 = () => {
     const [count, setCount] = useState(0);
 
     return (
@@ -12,4 +12,4 @@ const Part2 = () => {
     )
 }
 
-export default Part2;
+export default Example2;

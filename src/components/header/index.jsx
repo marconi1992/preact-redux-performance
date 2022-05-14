@@ -7,9 +7,9 @@ const Header = () => (
 		<nav>
 			<Link activeClassName={style.active} href="/">Why React?</Link>
 			<Link activeClassName={style.active} href="/wasted-renders">Wasted Renders</Link>
-			<Link activeClassName={style.active} href="/part-1">Part 1</Link>
-			<Link activeClassName={style.active} href="/part-2">Part 2</Link>
-			<Link activeClassName={style.active} href="/part-3">Part 3</Link>
+			<Link activeClassName={style.active} href="/example-1">Example 1</Link>
+			<Link activeClassName={style.active} href="/example-2">Example 2</Link>
+			<Link activeClassName={style.active} href="/example-3">Example 3</Link>
 			<Link activeClassName={style.active} href="/redux">Redux</Link>
 		</nav>
 	</header>
