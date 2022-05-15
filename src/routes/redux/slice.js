@@ -1,30 +1,30 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 export const initialState = {
+    inputValue: "",
     items: [
         { status: "active", text: "Learn React" },
         { status: "finished", text: "Relax" }
     ],
-    itemInputText: "",
 };
 
 const slice = createSlice({
     name: 'kanban',
     initialState,
     reducers: {
-        setItemInputText: (state, { payload }) => {
-            state.itemInputText = payload.text;
+        setInputValue: (state, { payload }) => {
+            state.inputValue = payload.text;
         },
         addItem: (state) => {
             state.items.push({
                 status: "active",
-                text: state.itemInputText,
+                text: state.inputValue,
             });
-            state.itemInputText = "";
+            state.inputValue = "";
         }
     }
 })
 
-export const { setItemInputText, addItem } = slice.actions
+export const { setInputValue, addItem } = slice.actions
 
 export default slice.reducer;

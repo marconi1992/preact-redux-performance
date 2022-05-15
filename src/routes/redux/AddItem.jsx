@@ -5,18 +5,18 @@ import { connect } from "react-redux";
 import { addItem } from "./slice";
 
 const AddItem = ({ addItem }) => {
-    const [itemInputText, setItemInputText] = useState("");
+    const [inputValue, setInputValue] = useState("");
 
-    const onInputChange = useCallback((evt) => setItemInputText(evt.target.value), [setItemInputText]);
+    const onInputChange = useCallback((evt) => setInputValue(evt.target.value), []);
 
     const onAddItem = useCallback(() => {
-        addItem(itemInputText);
-        setItemInputText("")
-    }, [addItem, setItemInputText, itemInputText]);
+        addItem(inputValue);
+        setInputValue("")
+    }, [addItem, setInputValue, inputValue]);
 
     return (
         <>
-            <Input className="mr-2" onChange={onInputChange} value={itemInputText} />
+            <Input className="mr-2" onChange={onInputChange} value={inputValue} />
             <Button className="mb-4" onClick={onAddItem}>Add item</Button>
         </>  
     )

@@ -4,7 +4,7 @@ import TodoList from '../../components/TodoList';
 import Input from "../../components/Input";
 
 const initialState = {
-    itemInputText: "",
+    inputValue: "",
     items: [
         { status: "active", text: "Learn React" },
         { status: "finished", text: "Relax" }
@@ -20,26 +20,26 @@ const reducer = (state, action) => {
                     ...state.items,
                     {
                         status: "active",
-                        text: state.itemInputText
+                        text: state.inputValue
                     }
                 ],
-                itemInputText: "", 
+                inputValue: "",
             };
-        case "setItemInputText":
+        case "setInputValue":
             return {
                 ...state,
-                itemInputText: action.payload.text,
+                inputValue: action.payload.text,
             }
     }
 }
 
 
 const Example3 = () => {
-    const [{ itemInputText, items }, dispatch] = useReducer(reducer, initialState); 
+    const [{ inputValue, items }, dispatch] = useReducer(reducer, initialState);
 
     const addItem = useCallback(() => dispatch({ type: "addItem"}), []);
-    const setItemInputText = useCallback((evt) => dispatch({
-        type: "setItemInputText",
+    const setInputValue = useCallback((evt) => dispatch({
+        type: "setInputValue",
         payload: { text: evt.target.value }
     }), []);
 
@@ -49,8 +49,8 @@ const Example3 = () => {
         <div className="container-text mx-auto pt-6">
             <Input 
                 className="mr-2"
-                onChange={setItemInputText}
-                value={itemInputText} />
+                onChange={setInputValue}
+                value={inputValue} />
             <Button onClick={addItem}>Add Item</Button>
             <div className="pt-4">
                 <h3 className="font-medium">In Progress</h3>
