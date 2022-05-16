@@ -6,7 +6,6 @@ import { setInputValue, addItem } from "./slice";
 
 const Kanban = ({ items, inputValue, setInputValue, addItem }) => {
     const activeItems = items.filter((item) => item.status === "active");
-    const finishedItems = items.filter((item) => item.status === "finished");
 
     return (
         <div className="container-text mx-auto pt-6">
@@ -17,8 +16,6 @@ const Kanban = ({ items, inputValue, setInputValue, addItem }) => {
             <Button className="mb-4" onClick={addItem}>Add item</Button>
             <h3 className="font-medium">In Progress</h3>
             <TodoList items={activeItems} />
-            <h3 className="font-medium">Done</h3>
-            <TodoList items={finishedItems} />
         </div>
     );
 };  
